@@ -9,7 +9,7 @@ y = df[target]
 
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler(feature_range=(0, 1))
-x = scaler.fit_transform(x)
+x_scaled = scaler.fit_transform(x)
 
 from sklearn.model_selection import train_test_split
 x_train, x_val, y_train, y_val = train_test_split(x, y, test_size=0.2, random_state=42)
